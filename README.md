@@ -18,21 +18,19 @@ A full-stack stock dashboard application with a React frontend and FastAPI backe
 
 
 ## Project Structure
-
 stock-dashboard/
+├── backend/ # FastAPI backend code
+│ ├── main.py
+│ ├── database.py
+│ ├── requirements.txt
+│ └── Dockerfile
 │
-├─ backend/ # FastAPI backend code
-│ ├─ main.py
-│ ├─ database.py
-│ ├─ requirements.txt
-│ └─ Dockerfile
+├── frontend/ # React frontend code
+│ ├── package.json
+│ ├── src/
+│ └── Dockerfile
 │
-├─ frontend/ # React frontend code
-│ ├─ package.json
-│ ├─ src/
-│ └─ Dockerfile
-│
-└─ docker-compose.yml # Docker Compose setup for both frontend & backend
+└── docker-compose.yml # Docker Compose setup for both frontend & backend
 
 
 ---
