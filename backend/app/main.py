@@ -12,7 +12,8 @@ app = FastAPI(title="Stock Market Dashboard")
 # ✅ Enable CORS
 origins = [
     "http://localhost:3000",   # frontend react
-    "http://127.0.0.1:3000",   # optional
+    "http://127.0.0.1:3000",
+    "https://stock-market-dashboard-tan.vercel.app", #optional
 ]
 
 app.add_middleware(
