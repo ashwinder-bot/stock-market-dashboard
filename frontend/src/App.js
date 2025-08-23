@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    axios.get("http://127.0.0.1:8000/companies")
+    axios.get(`${process.env.REACT_APP_API_URL}/companies`)
       .then((res) => {
         console.log("Companies from backend:", res.data);
         setCompanies(res.data);
@@ -29,7 +29,8 @@ function App() {
   useEffect(() => {
     if (selectedCompany) {
       setLoading(true);
-      axios.get(`http://127.0.0.1:8000/stocks/company/${selectedCompany}?days=${days}`)
+      axios.get(`${process.env.REACT_APP_API_URL}/stocks/company/${selectedCompany}?days=${days}`)
+
         .then((res) => {
           setStockData(res.data);
           setError(null);
